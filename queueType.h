@@ -1,13 +1,20 @@
 #pragma once
+#include "customerType.h"
 
 class queueType {
 
-
+public:
 	customerType top();
-	customerType back();
-	qeueType();
-	void push();
+	customerType bottom();
+	queueType();
+	void push(customerType newCust);
 	customerType pop();
+	void print();
+	void printFULL();
+	//getters
+	int getLength();
+	int getMaxLength();
+
 
 
 private:
@@ -18,4 +25,4 @@ int front;
 int back;
 
 
-}
+};
