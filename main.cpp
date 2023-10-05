@@ -18,11 +18,11 @@ int main() {
 
 	newQueue.push(newCustomer);
 	newQueue.print();
-	//newQueue.printFULL();
+	
 	newQueue.push(newCustomer2);
 	newQueue.pop();
 	newQueue.print();
-	//newQueue.printFULL();
+	
 	newQueue.push(newCustomer3);
 	newQueue.push(newCustomer4);
 	newQueue.push(newCustomer5);
