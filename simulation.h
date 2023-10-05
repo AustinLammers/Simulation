@@ -3,7 +3,7 @@
 class simulation {
 public:
 	simulation();
-	static simFailure();
+	static void simFailure();
 
 private:
 	
