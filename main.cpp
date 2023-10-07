@@ -4,7 +4,7 @@
 
 int main() {
 	
-	std::cout << "Hello World\n";
+	//queue Testing
 
 	queueType newQueue;
 	customerType newCustomer(1);
@@ -20,6 +20,7 @@ int main() {
 	newQueue.print();
 	//newQueue.printFULL();
 	newQueue.push(newCustomer2);
+	newQueue.print();
 	newQueue.pop();
 	newQueue.print();
 	//newQueue.printFULL();
@@ -27,6 +28,7 @@ int main() {
 	newQueue.push(newCustomer4);
 	newQueue.push(newCustomer5);
 	newQueue.push(newCustomer6);
+	newQueue.print();
 	newQueue.pop();
 	newQueue.pop();
 	newQueue.print();

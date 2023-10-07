@@ -1,8 +1,6 @@
 #include "queueType.h"
 #include <iostream>
 
-
-
 	customerType queueType::top() {
 		return queueContents[front];
 
@@ -21,9 +19,6 @@
 			else abort();
 			length++;
 			queueContents[back] = newCust;
-
-		
-
 	}
 
 	customerType queueType::pop() {
@@ -34,8 +29,6 @@
 		else abort();
 		length--;
 		return queueContents[currID];
-
-
 	}
 
 	void queueType::print() {
@@ -45,9 +38,7 @@
 			std::cout << queueContents[i].getID() << ", ";
 
 		}
-
 		std::cout << "\n\n";
-
 	}
 
 	void queueType::printFULL() {
@@ -64,13 +55,11 @@
 	int queueType::getLength() {
 
 		return length;
-
 	}
 
 	int queueType::getMaxLength() {
 
 		return MAX_LENGTH;
-
 	}
 
 	queueType::queueType() {
@@ -79,5 +68,4 @@
 		 MAX_LENGTH = 100;
 		 length = 0;
 		 queueContents = new customerType[MAX_LENGTH];
-
 	}
