@@ -22,3 +22,10 @@ customerType::customerType(int newID) {
 
     customerID = newID;
 }
+
+customerType::customerType(int newID, int pref, double strength) {
+
+customerID = newID;
+preference = pref;
+preferenceStrength = strength;
+}
