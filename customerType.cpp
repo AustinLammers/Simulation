@@ -1,12 +1,14 @@
+
 #include "customerType.h"
 
-using namespace std;
 
-ostream& operator<<(ostream& output, customerType& customer)
+
+/*ostream& operator<<(ostream& output, customerType& customer)
 {
     output << customer.getID();
     return output;
 }
+*/
 
 int customerType::getID() {
 
