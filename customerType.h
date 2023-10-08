@@ -2,6 +2,7 @@
 #include <iostream>
 
 
+
 using namespace std;
 class customerType {
 
@@ -9,9 +10,14 @@ public:
 	customerType();
 	customerType(int newID);
 	customerType(int newID, int pref, double strength);
-	friend ostream& operator<<(ostream& output, const customerType& customer);
+	//friend ostream& operator<<(ostream& output, const customerType& customer);
 	int getID();
-	//station getCurrStation();
+	int getTimeSpent();
+	int getPreference();
+	int getPreferenceStrength();
+	void getPrefPair(int& custPref, double& custPrefStrength);
+	int makeDecision(int linePercent, int numStations);
+	int randomChoice(int numStations);
 
 
 private:
@@ -21,5 +27,6 @@ private:
 	//station currStation;
 	int preference;
 	double preferenceStrength;
+	
 
 };
