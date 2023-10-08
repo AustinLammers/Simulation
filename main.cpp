@@ -45,4 +45,7 @@ int main() {
 
 	cout << "Customer Pair Retrieval:\nPref: " << customerPref << "\nStrength: " << customerPrefStrength << endl; 
 
+	cout << "Customer Descision Making: station 70% full, and 6 total stations\n";
+	cout << "Descision Made: " << customer4.makeDecision(.70, 6) << endl;
+
 }

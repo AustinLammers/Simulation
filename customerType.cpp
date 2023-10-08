@@ -59,7 +59,7 @@ void customerType::getPrefPair(int& custPref, double& custPrefStrength) {
 
 }
 
-int customerType::makeDecision(int linePercent, int numStations) {
+int customerType::makeDecision(double linePercent, int numStations) {
 
     //based on how full the line is, decide whether to join the line or find a random other line to join.
     if (linePercent <= preferenceStrength) {
@@ -76,8 +76,9 @@ int customerType::makeDecision(int linePercent, int numStations) {
 
 int customerType::randomChoice(int numStations) {
     srand(time(NULL));
-    int random = rand() % numStations;
-    if (random == preference) return (random >> 1) + 1;
+    unsigned int random = rand() % numStations;
+    if (random == preference) return ((random >> 1) + 1);
+    else if (random == 0) return 1;
     else return random;
 
 
