@@ -44,7 +44,7 @@ int customerType::getPreference() {
 
 }
 
-int customerType::getPreferenceStrength() {
+double customerType::getPreferenceStrength() {
 
 
     return preferenceStrength;

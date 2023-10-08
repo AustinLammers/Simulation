@@ -14,7 +14,7 @@ public:
 	int getID();
 	int getTimeSpent();
 	int getPreference();
-	int getPreferenceStrength();
+	double getPreferenceStrength();
 	void getPrefPair(int& custPref, double& custPrefStrength);
 	int makeDecision(int linePercent, int numStations);
 	int randomChoice(int numStations);

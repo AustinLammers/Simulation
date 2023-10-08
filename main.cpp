@@ -32,11 +32,17 @@ int main() {
 	newQueue.print();
 
 	cout << "Customer Test:\n";
-	
+	int customerPref;
+	double customerPrefStrength;
+	int currcustomerID;
 
+	currcustomerID = customer2.getID();
+	customerPref = customer2.getPreference();
+	customerPrefStrength = customer2.getPreferenceStrength();
 
-	
-	
+	cout << "Customer 2 Stats: \nID: " << currcustomerID << "\nPref: " << customerPref << "\nStrength: " << customerPrefStrength << endl;
+	customer3.getPrefPair(customerPref, customerPrefStrength);
 
+	cout << "Customer Pair Retrieval:\nPref: " << customerPref << "\nStrength: " << customerPrefStrength << endl; 
 
 }
