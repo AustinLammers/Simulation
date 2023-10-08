@@ -18,11 +18,11 @@ public:
 
 
 private:
-int length;
-int MAX_LENGTH;
-customerType* queueContents;
-int front;
-int back;
+	int length;
+	int MAX_LENGTH;
+	customerType* queueContents;
+	int front;
+	int back;
 
 
 };

@@ -32,3 +32,12 @@ station::station(int ID, int time, std::string name) {
     serviceTime = time;
 
 }
+
+station::station(int ID, int time, std::string name, int maxline) {
+
+    stationID = ID;
+    nickname = name;
+    serviceTime = time;
+    MAX_LINE = maxline;
+
+}
