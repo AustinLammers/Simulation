@@ -1,38 +1,42 @@
 #include <iostream>
 #include "queueType.h"
 
-
+using namespace std;
 int main() {
 	
 	//queue Testing
-
+	cout << "Queue Test:\n";
 	queueType newQueue;
-	customerType newCustomer(1);
-	customerType newCustomer2(2);
-	customerType newCustomer3(56);
-	customerType newCustomer4(78);
-	customerType newCustomer5(23);
-	customerType newCustomer6(12);
-	customerType newCustomer7(70);
-	customerType newCustomer8(42);
+	customerType customer1(0, 0, 1.0);
+	customerType customer2(1, 2, .75);
+	customerType customer3(2, 3, .65);
+	customerType customer4(3, 4, .56);
+	customerType customer5(4, 6, .78);
+	customerType customer6(5, 3, .24);
 
-	newQueue.push(newCustomer);
+	newQueue.push(customer1);
 	newQueue.print();
 	
-	newQueue.push(newCustomer2);
+	newQueue.push(customer2);
 	newQueue.print();
 	newQueue.pop();
 	newQueue.print();
 	
-	newQueue.push(newCustomer3);
-	newQueue.push(newCustomer4);
-	newQueue.push(newCustomer5);
-	newQueue.push(newCustomer6);
+	newQueue.push(customer3);
+	newQueue.push(customer4);
+	newQueue.push(customer5);
+	newQueue.push(customer6);
 	newQueue.print();
 	newQueue.pop();
 	newQueue.pop();
 	newQueue.print();
 
+	cout << "Customer Test:\n";
+	
+
+
+	
+	
 
 
 }

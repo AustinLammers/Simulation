@@ -11,6 +11,7 @@ public:
     station();
     station(int ID, int time);
     station(int ID, int time, std::string name);
+    station(int ID, int time, std::string name, int maxline);
 
 private:
 
@@ -19,5 +20,6 @@ private:
     std::string nickname;
     int serviceTime;
     customerType* currCustomer;
+    int MAX_LINE;
 
 };
