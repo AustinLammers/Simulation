@@ -6,9 +6,27 @@ customerType* station::getCustomer() {
 }
 
 void station::updateCustomer() {
+    if (getCustomer() != NULL) {
 
+        customerType* tempCust = getCustomer();
+        tempCust->incrementTimeSpent();
 
+        if (tempCust->getTimeSpent() >= serviceTime) currCustomer = NULL;
+
+    }
+    else if (line.getLength() > 0) { 
+
+        setCustomer(line.pop());
+        updateCustomer();
+    }
+    else {
+
+        return;
+    }
+
+ return;
 }
+
 station::station() {
 
     stationID = 0;

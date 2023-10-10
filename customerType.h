@@ -13,6 +13,7 @@ public:
 	//friend ostream& operator<<(ostream& output, const customerType& customer);
 	int getID();
 	int getTimeSpent();
+	void incrementTimeSpent();
 	int getPreference();
 	double getPreferenceStrength();
 	void getPrefPair(int& custPref, double& custPrefStrength);

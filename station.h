@@ -6,6 +6,7 @@ class station {
 
 public:
     customerType* getCustomer();
+    void setCustomer(customerType);
     void updateCustomer();
 
     station();

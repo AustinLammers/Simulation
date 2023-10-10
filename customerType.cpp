@@ -83,3 +83,8 @@ int customerType::randomChoice(int numStations) {
 
 
 }
+
+void customerType::incrementTimeSpent() {
+
+    currTimeSpent++;
+}
