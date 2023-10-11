@@ -1,10 +1,23 @@
 #include <iostream>
-#include "queueType.h"
+#include "simulation.h"
 
 using namespace std;
 int main() {
+	int numOfStations = 0;
+
+	cout << "Enter Number of stations: ";
+	cin >> numOfStations;
+
+	simulation sim(numOfStations);
+
+	sim.startSim();
 	
-	//queue Testing
+	
+}
+
+
+/*
+//queue Testing
 	cout << "Queue Test:\n";
 	queueType newQueue;
 	customerType customer1(0, 0, 1.0);
@@ -48,4 +61,4 @@ int main() {
 	cout << "Customer Descision Making: station 70% full, and 6 total stations\n";
 	cout << "Descision Made: " << customer4.makeDecision(.70, 6) << endl;
 
-}
+*/
