@@ -15,9 +15,9 @@ void station::updateCustomer() {
 
     }
     else if (line.getLength() > 0) { 
-
-        setCustomer(line.pop());
-        updateCustomer();
+        customerType temp = line.pop();
+        this->setCustomer(&temp);
+        this->updateCustomer();
     }
     else {
 
@@ -57,5 +57,16 @@ station::station(int ID, int time, std::string name, int maxline) {
     nickname = name;
     serviceTime = time;
     MAX_LINE = maxline;
+    currCustomer = NULL;
 
+}
+
+void station::queueCustomer(customerType cust) {
+
+    line.push(cust);
+}
+
+void station::setCustomer(customerType* cust) {
+
+    currCustomer = cust;
 }

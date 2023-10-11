@@ -6,8 +6,9 @@ class station {
 
 public:
     customerType* getCustomer();
-    void setCustomer(customerType);
+    void setCustomer(customerType*);
     void updateCustomer();
+    void queueCustomer(customerType);
 
     station();
     station(int ID, int time);

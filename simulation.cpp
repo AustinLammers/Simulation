@@ -6,10 +6,11 @@ simulation::simulation() {
 numStations = 0;
 
 }
-simulation::simulation(int stations) {
+simulation::simulation(int stations, int duration) {
 
     numStations = stations;
     stationArr = new station[numStations];
+    runtime = duration;
     for (int i = 0; i < numStations; i++) {
         string nick = "";
         int serve = 0;
@@ -35,6 +36,8 @@ void simulation::simFailure() {
 
 void simulation::startSim() {
 
+    generateCustomer();
+    while(simTime < runtime) update();
     
 }
 
@@ -44,7 +47,7 @@ void simulation::generateCustomer() {
     int randPref = rand() % numStations;
     double randStrength = rand() / RAND_MAX;
     customerType* tempCustomer = new customerType(customersCreated,randPref, randStrength);
-    tempCustomer->makeDecision(randPref, randStrength);
+    stationArr[tempCustomer->makeDecision(randPref, randStrength)].queueCustomer(*tempCustomer);
 
 }
 

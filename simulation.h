@@ -5,7 +5,7 @@
 class simulation {
 public:
 	simulation();
-	simulation(int);
+	simulation(int,int);
 	static void simFailure();
 	void startSim();
 	void update();
@@ -16,6 +16,7 @@ private:
 	int numStations;
 	station* stationArr;
 	int simTime;
+	int runtime;
 	int customersCreated;
 
 };

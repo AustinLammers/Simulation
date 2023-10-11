@@ -30,6 +30,7 @@ customerType::customerType(int newID, int pref, double strength) {
 customerID = newID;
 preference = pref;
 preferenceStrength = strength;
+currTimeSpent = 0;
 }
 
 int customerType::getTimeSpent() {
@@ -77,8 +78,7 @@ int customerType::makeDecision(double linePercent, int numStations) {
 int customerType::randomChoice(int numStations) {
     srand(time(NULL));
     unsigned int random = rand() % numStations;
-    if (random == preference) return ((random >> 1) + 1);
-    else if (random == 0) return 1;
+    if (random == preference) return ((random >> 1));
     else return random;
 
 
@@ -86,5 +86,5 @@ int customerType::randomChoice(int numStations) {
 
 void customerType::incrementTimeSpent() {
 
-    currTimeSpent++;
+    currTimeSpent += 1;
 }

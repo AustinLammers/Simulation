@@ -4,11 +4,14 @@
 using namespace std;
 int main() {
 	int numOfStations = 0;
-
+	int simDuration = 0;
+	cout << "Enter Duration of simulation: ";
+	cin >> simDuration;
 	cout << "Enter Number of stations: ";
 	cin >> numOfStations;
 
-	simulation sim(numOfStations);
+
+	simulation sim(numOfStations, simDuration);
 
 	sim.startSim();
 	
