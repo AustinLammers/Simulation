@@ -1,5 +1,5 @@
 #include "station.h"
-
+using namespace std;
 customerType* station::getCustomer() {
 
     return currCustomer;
@@ -11,17 +11,23 @@ void station::updateCustomer() {
         customerType* tempCust = getCustomer();
         tempCust->incrementTimeSpent();
 
-        if (tempCust->getTimeSpent() >= serviceTime) currCustomer = NULL;
+        if (tempCust->getTimeSpent() >= serviceTime) {
+            cout << "Customer " << tempCust->getID() << " has left the " << this->getName() << "(" << this->getID() << ") Station" << endl;
+            currCustomer = NULL;
+
+        }
 
     }
     else if (line.getLength() > 0) { 
         customerType temp = line.pop();
         this->setCustomer(&temp);
+        cout << "Customer " << currCustomer->getID() << " has entered the " << this->getName() << "(" << this->getID() << ") Station" << endl;
         this->updateCustomer();
     }
     else {
-
+        cout << "The " << this->getName() << "(" << this->getID() << ") Station is currently empty!" << endl;
         return;
+
     }
 
  return;
@@ -69,4 +75,14 @@ void station::queueCustomer(customerType cust) {
 void station::setCustomer(customerType* cust) {
 
     currCustomer = cust;
+}
+
+string station::getName() { 
+
+    return nickname;
+}
+
+int station::getID() {
+
+    return stationID;
 }

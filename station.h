@@ -9,6 +9,8 @@ public:
     void setCustomer(customerType*);
     void updateCustomer();
     void queueCustomer(customerType);
+    string getName();
+    int getID();
 
     station();
     station(int ID, int time);

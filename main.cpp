@@ -2,6 +2,8 @@
 #include "simulation.h"
 
 using namespace std;
+void readFile();
+
 int main() {
 	int numOfStations = 0;
 	int simDuration = 0;
@@ -12,10 +14,23 @@ int main() {
 
 
 	simulation sim(numOfStations, simDuration);
-
 	sim.startSim();
 	
 	
+}
+
+void readFile() {
+
+
+
+}
+
+void readInput(int& Duration, int& numStations) {
+
+	cout << "Enter Duration of simulation: ";
+	cin >> Duration;
+	cout << "Enter Number of stations: ";
+	cin >> numStations;
 }
 
 

@@ -15,8 +15,8 @@ public:
 private:
 	int numStations;
 	station* stationArr;
-	int simTime;
-	int runtime;
-	int customersCreated;
+	int simTime = 0;
+	int totalRuntime;
+	int customersCreated = 0;
 
 };
