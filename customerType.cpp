@@ -27,10 +27,10 @@ customerType::customerType(int newID) {
 
 customerType::customerType(int newID, int pref, double strength) {
 
-customerID = newID;
-preference = pref;
-preferenceStrength = strength;
-currTimeSpent = 0;
+    customerID = newID;
+    preference = pref;
+    preferenceStrength = strength;
+    currTimeSpent = 0;
 }
 
 int customerType::getTimeSpent() {

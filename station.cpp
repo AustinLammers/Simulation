@@ -12,7 +12,7 @@ void station::updateCustomer() {
         tempCust->incrementTimeSpent();
 
         if (tempCust->getTimeSpent() >= serviceTime) {
-            cout << "Customer " << tempCust->getID() << " has left the " << this->getName() << "(" << this->getID() << ") Station" << endl;
+            cout << "Customer " << currCustomer->getID() << " has left the " << this->getName() << "(" << this->getID() << ") Station" << endl;
             currCustomer = NULL;
 
         }
